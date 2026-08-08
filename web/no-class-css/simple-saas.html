@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No-Class CSS Demo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Kirandeep-Singh-Khehra/public_assets@main/web/no-class-css/simple-saas.css">
+</head>
+
+<body>
+    <aside>
+        <header>
+            <h1>Elements</h1>
+
+            <select id="theme-selector" aria-label="Select theme">
+                <option value="system">System</option>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
+        </header>
+
+        <nav aria-label="Demo sections">
+            <a href="#typography" aria-current="page">Typography</a>
+            <a href="#buttons">Buttons</a>
+            <a href="#chips">Chips</a>
+            <a href="#forms">Forms</a>
+            <a href="#tables">Tables</a>
+            <a href="#other">Other</a>
+        </nav>
+    </aside>
+
+    <main>
+        <header>
+            <h1>No-Class CSS Demo</h1>
+            <p>
+                Semantic HTML styled without CSS classes. Variants use native
+                attributes and <code>data-*</code> attributes where needed.
+            </p>
+        </header>
+
+        <section id="typography">
+            <h2>Typography and links</h2>
+
+            <article>
+                <h3>Text styles</h3>
+
+                <p>
+                    This is normal text with <strong>strong text</strong>,
+                    <em>emphasized text</em>, <mark>highlighted text</mark>,
+                    <del>deleted text</del>, and <ins>inserted text</ins>.
+                </p>
+
+                <p>
+                    Visit the <a href="#">documentation</a>, press
+                    <kbd>Ctrl</kbd> + <kbd>K</kbd>, or run
+                    <code>npm start</code>.
+                </p>
+
+                <small>This is secondary or supporting text.</small>
+
+                <blockquote>
+                    Semantic HTML provides meaning before visual styling is applied.
+                </blockquote>
+
+                <pre><code>const message = "Hello, world!";
+console.log(message);</code></pre>
+            </article>
+
+            <article>
+                <h3>Lists and definitions</h3>
+
+                <ul>
+                    <li>Unordered list item</li>
+                    <li>Another list item</li>
+                    <li>Final list item</li>
+                </ul>
+
+                <ol>
+                    <li>Install dependencies</li>
+                    <li>Start the service</li>
+                    <li>Open the dashboard</li>
+                </ol>
+
+                <dl>
+                    <dt>API</dt>
+                    <dd>Application programming interface.</dd>
+
+                    <dt>SSE</dt>
+                    <dd>Server-sent events for live updates.</dd>
+
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets.</dd>
+                </dl>
+            </article>
+        </section>
+
+        <section id="buttons">
+            <h2>Buttons</h2>
+
+            <article>
+                <h3>Button variants</h3>
+
+                <menu>
+                    <button type="button">Default</button>
+                    <button type="button" data-variant="primary">Primary</button>
+                    <button type="button" data-variant="success">Success</button>
+                    <button type="button" data-variant="warning">Warning</button>
+                    <button type="button" data-variant="danger">Danger</button>
+                    <button type="button" data-variant="ghost">Ghost</button>
+                    <button type="button" disabled>Disabled</button>
+                </menu>
+
+                <h3>Button sizes</h3>
+
+                <menu>
+                    <button type="button" data-size="small">Small</button>
+                    <button type="button">Default</button>
+                    <button type="button" data-size="large">Large</button>
+                </menu>
+
+                <h3>Input buttons</h3>
+
+                <menu>
+                    <input type="button" value="Input button">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </menu>
+            </article>
+        </section>
+
+        <section id="chips">
+            <h2>Chips and badges</h2>
+
+            <article>
+                <h3>Display chips</h3>
+
+                <p>
+                    <mark>Default</mark>
+                    <mark data-variant="accent">Active</mark>
+                    <mark data-variant="success">Running</mark>
+                    <mark data-variant="warning">Pending</mark>
+                    <mark data-variant="danger">Failed</mark>
+                    <output data-chip>12 items</output>
+                </p>
+
+                <h3>Interactive chips</h3>
+
+                <p>
+                    <button type="button" data-chip>JavaScript ×</button>
+                    <button type="button" data-chip>CSS ×</button>
+                    <button type="button" data-chip>HTML ×</button>
+                    <a href="#" data-chip>View logs</a>
+                </p>
+            </article>
+        </section>
+
+        <section id="forms">
+            <h2>Form elements</h2>
+
+            <form id="demo-form">
+                <fieldset>
+                    <legend>Account information</legend>
+
+                    <label>
+                        Full name
+                        <input
+                            type="text"
+                            name="name"
+                            placeholder="Ada Lovelace"
+                            autocomplete="name"
+                        >
+                    </label>
+
+                    <label>
+                        Email address
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="ada@example.com"
+                            autocomplete="email"
+                            required
+                        >
+                        <small>A valid email address is required.</small>
+                    </label>
+
+                    <label>
+                        Password
+                        <input
+                            type="password"
+                            name="password"
+                            placeholder="Enter password"
+                            autocomplete="new-password"
+                        >
+                    </label>
+
+                    <label>
+                        Website
+                        <input
+                            type="url"
+                            name="website"
+                            placeholder="https://example.com"
+                        >
+                    </label>
+
+                    <label>
+                        Search
+                        <input
+                            type="search"
+                            name="search"
+                            placeholder="Search services..."
+                        >
+                    </label>
+
+                    <label>
+                        Phone
+                        <input
+                            type="tel"
+                            name="phone"
+                            placeholder="+1 555 123 4567"
+                        >
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Numbers and dates</legend>
+
+                    <label>
+                        Quantity
+                        <input type="number" name="quantity" min="1" max="100" value="10">
+                    </label>
+
+                    <label>
+                        Date
+                        <input type="date" name="date">
+                    </label>
+
+                    <label>
+                        Time
+                        <input type="time" name="time">
+                    </label>
+
+                    <label>
+                        Month
+                        <input type="month" name="month">
+                    </label>
+
+                    <label>
+                        Week
+                        <input type="week" name="week">
+                    </label>
+
+                    <label>
+                        Date and time
+                        <input type="datetime-local" name="datetime">
+                    </label>
+
+                    <label>
+                        Completion
+                        <input type="range" name="completion" min="0" max="100" value="65">
+                    </label>
+
+                    <label>
+                        Accent color
+                        <input type="color" name="color" value="#63b3ed">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Selections</legend>
+
+                    <label>
+                        Environment
+                        <select name="environment">
+                            <option value="">Select an environment</option>
+                            <option value="development">Development</option>
+                            <option value="staging">Staging</option>
+                            <option value="production">Production</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Multiple services
+                        <select name="services" multiple size="4">
+                            <option>API</option>
+                            <option>Worker</option>
+                            <option>Database</option>
+                            <option>Cache</option>
+                        </select>
+                    </label>
+
+                    <label>
+                        Notes
+                        <textarea
+                            name="notes"
+                            placeholder="Add deployment notes..."
+                        ></textarea>
+                    </label>
+
+                    <label>
+                        Configuration file
+                        <input type="file" name="config">
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Checkboxes and radios</legend>
+
+                    <label>
+                        <input type="checkbox" name="notifications" checked>
+                        Enable notifications
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="analytics">
+                        Share anonymous analytics
+                    </label>
+
+                    <hr>
+
+                    <label>
+                        <input type="radio" name="plan" value="free" checked>
+                        Free plan
+                    </label>
+
+                    <label>
+                        <input type="radio" name="plan" value="team">
+                        Team plan
+                    </label>
+
+                    <label>
+                        <input type="radio" name="plan" value="enterprise">
+                        Enterprise plan
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>States and indicators</legend>
+
+                    <label>
+                        Read-only value
+                        <input type="text" value="Generated identifier" readonly>
+                    </label>
+
+                    <label>
+                        Disabled field
+                        <input type="text" value="Unavailable" disabled>
+                    </label>
+
+                    <label>
+                        Storage usage
+                        <meter min="0" max="100" low="30" high="80" optimum="20" value="64">
+                            64%
+                        </meter>
+                    </label>
+
+                    <label>
+                        Upload progress
+                        <progress max="100" value="72">72%</progress>
+                    </label>
+                </fieldset>
+
+                <menu>
+                    <button type="submit" data-variant="primary">Save changes</button>
+                    <button type="reset">Reset form</button>
+                    <button type="button" id="show-dialog">Open dialog</button>
+                </menu>
+
+                <p role="status" id="form-status" hidden>
+                    Form submitted successfully.
+                </p>
+            </form>
+        </section>
+
+        <section id="tables">
+            <h2>Tables</h2>
+
+            <figure>
+                <table>
+                    <caption>Service status</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Service</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Port</th>
+                            <th scope="col">Latency</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><a href="#">API server</a></td>
+                            <td><mark data-variant="success">Running</mark></td>
+                            <td><code>8080</code></td>
+                            <td>24 ms</td>
+                            <td>
+                                <button type="button" data-size="small">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#">Background worker</a></td>
+                            <td><mark data-variant="warning">Pending</mark></td>
+                            <td><code>8081</code></td>
+                            <td>—</td>
+                            <td>
+                                <button type="button" data-size="small">View</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#">Database</a></td>
+                            <td><mark data-variant="danger">Offline</mark></td>
+                            <td><code>5432</code></td>
+                            <td>—</td>
+                            <td>
+                                <button
+                                    type="button"
+                                    data-size="small"
+                                    data-variant="danger"
+                                >
+                                    Restart
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <figcaption>
+                    A responsive table using semantic table elements.
+                </figcaption>
+            </figure>
+        </section>
+
+        <section id="other">
+            <h2>Other elements</h2>
+
+            <article>
+                <h3>Alerts and status messages</h3>
+
+                <p role="status">
+                    The service is connected and receiving events.
+                </p>
+
+                <p role="alert">
+                    The database connection could not be established.
+                </p>
+            </article>
+
+            <article>
+                <h3>Disclosure</h3>
+
+                <details>
+                    <summary>Show connection information</summary>
+                    <p>
+                        Connected to <code>localhost:8080</code> using
+                        server-sent events.
+                    </p>
+                </details>
+
+                <details open>
+                    <summary>Open by default</summary>
+                    <p>
+                        The native <code>details</code> element handles its own
+                        expanded state.
+                    </p>
+                </details>
+            </article>
+
+            <article>
+                <h3>Contact information</h3>
+
+                <address>
+                    Example Systems<br>
+                    <a href="mailto:support@example.com">support@example.com</a><br>
+                    <a href="tel:+15551234567">+1 555 123 4567</a>
+                </address>
+            </article>
+        </section>
+    </main>
+
+    <dialog id="demo-dialog">
+        <h2>Example dialog</h2>
+
+        <p>
+            This uses the native HTML <code>dialog</code> element.
+        </p>
+
+        <menu>
+            <button type="button" id="close-dialog">Cancel</button>
+            <button type="button" data-variant="primary" id="confirm-dialog">
+                Confirm
+            </button>
+        </menu>
+    </dialog>
+
+    <script>
+        const themeSelector = document.getElementById("theme-selector");
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const form = document.getElementById("demo-form");
+        const formStatus = document.getElementById("form-status");
+        const dialog = document.getElementById("demo-dialog");
+
+        function applyTheme() {
+            const selectedTheme = themeSelector.value;
+
+            const theme = selectedTheme === "system"
+                ? systemTheme.matches ? "dark" : "light"
+                : selectedTheme;
+
+            document.documentElement.dataset.theme = theme;
+        }
+
+        themeSelector.addEventListener("change", applyTheme);
+
+        systemTheme.addEventListener("change", () => {
+            if (themeSelector.value === "system") {
+                applyTheme();
+            }
+        });
+
+        form.addEventListener("submit", event => {
+            event.preventDefault();
+            formStatus.hidden = false;
+        });
+
+        form.addEventListener("reset", () => {
+            formStatus.hidden = true;
+        });
+
+        document.getElementById("show-dialog").addEventListener("click", () => {
+            dialog.showModal();
+        });
+
+        document.getElementById("close-dialog").addEventListener("click", () => {
+            dialog.close();
+        });
+
+        document.getElementById("confirm-dialog").addEventListener("click", () => {
+            dialog.close("confirmed");
+        });
+
+        document.querySelectorAll("button[data-chip]").forEach(chip => {
+            chip.addEventListener("click", () => {
+                chip.remove();
+            });
+        });
+
+        document.querySelectorAll("nav a").forEach(link => {
+            link.addEventListener("click", () => {
+                document.querySelectorAll("nav a").forEach(item => {
+                    item.removeAttribute("aria-current");
+                });
+
+                link.setAttribute("aria-current", "page");
+            });
+        });
+
+        applyTheme();
+    </script>
+</body>
+</html>
